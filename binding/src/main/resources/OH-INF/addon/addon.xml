@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon:addon id="smarthub" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:addon="https://openhab.org/schemas/addon/v1.0.0"
+             xsi:schemaLocation="https://openhab.org/schemas/addon/v1.0.0 https://openhab.org/schemas/addon-1.0.0.xsd">
+
+    <type>binding</type>
+    <name>SmartHub Binding</name>
+    <description>Binding for SmartHub Coop energy portals (electricity usage)</description>
+
+    <config-description>
+        <parameter name="host" type="text" required="true">
+            <label>SmartHub Host</label>
+            <description>e.g. athensalabama.smarthub.coop</description>
+        </parameter>
+        <parameter name="email" type="text" required="true">
+            <label>Email</label>
+        </parameter>
+        <parameter name="password" type="text" required="true">
+            <label>Password</label>
+            <context>password</context>
+        </parameter>
+        <parameter name="accountId" type="text" required="true">
+            <label>Account ID</label>
+        </parameter>
+        <parameter name="pollInterval" type="integer" required="false">
+            <label>Poll Interval (minutes)</label>
+            <default>360</default>
+            <min>15</min>
+            <max>1440</max>
+        </parameter>
+    </config-description>
+
+</addon:addon>
